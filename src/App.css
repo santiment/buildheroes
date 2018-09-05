@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  /*color: white;*/
 }
 
 p, li, td {
@@ -7,8 +8,12 @@ p, li, td {
   line-height: 22px;
 }
 
-a, a:visited, a:hover, .name {
-  color: #E94E77;
+a {
+  outline: none;
+  margin-right: 1em;
+  font-weight: 400;
+  color: #067df7;
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -29,17 +34,226 @@ body, code {
 
 body {
   padding: 0 10px;
+  /*background: black;*/
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+table {
+  margin: 0;
+  flex: 2;
+  border-collapse: collapse;
+}
+
+table thead {
+  display: none;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+table tr {
+  border-bottom: 1px solid #e3e3e3 !important;
+  border-color: #e3e3e3 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+th, td {
+  border: none;
 }
 
 table th {
   text-align: left;
 }
 
+table a {
+  text-transform: capitalize;
+  font-weight: 800;
+  /*letter-spacing: 0.1rem;*/
+  /*color: white;*/
+  /*color: #4cb07f;*/
+  color: rgba(0, 0, 0, 0.8);
+}
+
+table .chart {
+  min-width: 200px;
+}
+
+.github-activity-explanation {
+  margin-right: 100px;
+  text-align: left;
+  order: 2;
+}
+
+.github-activity-explanation h2 {
+  text-align: left;
+}
+
+.github-activity-explanation .rotate {
+  display: none;
+  transform: rotate(0deg) translateY(0rem) translateX(0rem); 
+  margin: 0;
+}
+
+.rotate h2 {
+  text-align: left;
+  color: white;
+  font-weight: 800;
+  margin: .8rem;
+}
+
+.rotate h2 span {
+  background: #E94E77;
+  padding: .25rem;
+}
+
+table .chart label {
+  /*color: white;*/
+  /*background: #4cb07f;*/
+  font-weight: 800;
+  padding: 0.25rem;
+  letter-spacing: 0.1rem;
+}
+
+table .chart div {
+  margin: 0;
+  height: auto;
+}
+
 footer {
   margin-top: 1em;
   padding-left: 4px;
+  padding-bottom: 1em;
+}
+
+table th {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #666666;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+.container > section, .container > header, .container > footer {
+  max-width: 1100px;                                                                             
+  margin: auto;
+}
+
+.container section {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  flex-direction: column;
+}
+
+.container section .github-activity-explanation {
+  flex: 1;
+}
+
+::selection {
+  background-color: #4cb07f;
+  color: #fff;
+}
+
+.container .title h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-weight: 200;
+}
+
+.month-control {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.month-control strong {
+  padding: .25rem 1.5rem;
+}
+
+.month {
+  padding: .25rem 1.5rem;
+  font-size: 18;
+  color: rgba(0,0,0,.65);
+  text-decoration: line-through;
+}
+
+.month:hover {
+  color: rgba(0,0,0,.85);
+  text-decoration: line-through;
+}
+
+.month.active {
+  font-weight: 600;
+  color: rgba(0,0,0,.85);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .month-control {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  table tr {
+    display: table-row;
+  }
+
+  table {
+    margin: 0 auto; 
+    margin-top: 1rem;
+  }
+
+  table thead {
+    display: block;
+  }
+
+  .container section {
+    flex-direction: row;
+  }
+
+  .github-activity-explanation .rotate {
+    display: block;
+    transform: rotate(-8deg) translateY(-1rem) translateX(-1.2rem); 
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .github-activity-explanation {
+    order: 0;
+  }
+
+  table .chart div {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    height: 70px;
+  }
+
+  .container .title {
+    display: none;
+  }
 }

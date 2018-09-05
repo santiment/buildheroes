@@ -5,15 +5,17 @@
   "dependencies": {
     "apollo-boost": "^0.1.15",
     "graphql": "^14.0.0",
+    "normalize.css": "^8.0.0",
     "react": "^16.4.2",
     "react-apollo": "^2.1.11",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "react-svg-line-chart": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "CI=true npm run test && npm run build && surge -d buildheroes.surge.sh -p build",
+    "deploy": "CI=true npm run test && npm run build && surge buidljheroes.com -p build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
