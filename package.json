@@ -1,6 +1,6 @@
 {
-  "name": "buildheroes",
-  "version": "0.1.0",
+  "name": "buidlheroes",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.15",
