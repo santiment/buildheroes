@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "CI=true npm run test && npm run build && surge buidlheroes.com -p build",
+    "deploy": "CI=true npm run test && npm run build &&  surge build/ buidlheroes.com",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
