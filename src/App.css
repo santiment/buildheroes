@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /*color: white;*/
 }
 
 p, li, td {
@@ -73,9 +72,6 @@ table th {
 table a {
   text-transform: capitalize;
   font-weight: 800;
-  /*letter-spacing: 0.1rem;*/
-  /*color: white;*/
-  /*color: #4cb07f;*/
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -113,8 +109,6 @@ table .chart {
 }
 
 table .chart label {
-  /*color: white;*/
-  /*background: #4cb07f;*/
   font-weight: 800;
   padding: 0.25rem;
   letter-spacing: 0.1rem;
@@ -170,7 +164,7 @@ h4 {
 }
 
 ::selection {
-  background-color: #4cb07f;
+  background-color: #E94E77;
   color: #fff;
 }
 

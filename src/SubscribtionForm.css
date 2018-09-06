@@ -8,6 +8,7 @@
   padding: .5rem;
   border: none;
   margin-top: 1em;
+  text-transform: capitalize;
 }
 
 .subscribtion-form .subscribtion-form__input {
@@ -48,10 +49,6 @@
     transform: translateY(+800%);
     animation: 0.5s fadeIn;
     animation-fill-mode: forwards;
-  }
-
-  .subscribtion-form .subscribtion-form__submit {
-    margin-top: 0;
   }
 
   @keyframes fadeIn {

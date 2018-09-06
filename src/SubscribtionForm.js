@@ -7,7 +7,8 @@ const API_URL = 'https://us-central1-buidlheroes.cloudfunctions.net'
 class SubscribtionForm extends React.Component {
   state = {
     email: undefined,
-    isSendSuccess: false
+    isPending: false,
+    isSuccess: false
   }
 
   handleSubmit = event => {
@@ -16,11 +17,12 @@ class SubscribtionForm extends React.Component {
   }
 
   sendEmail = debounce(() => { 
+    this.setState({isPending: true});
     const http = new XMLHttpRequest()
     http.open('GET', API_URL + `/addSubscriber?email=${this.state.email}`)
     http.send();
     http.onreadystatechange = e => {
-      this.setState({isSendSuccess: true})
+      this.setState({isSuccess: true})
     }
   }, 500)
 
@@ -29,10 +31,11 @@ class SubscribtionForm extends React.Component {
   }
 
   render() {
-    if (this.state.isSendSuccess) {
+    const { isPending, isSuccess } = this.state
+    if (isSuccess) {
       return (
         <div className='subscribtion-form-success'>
-          <p>You have subscribed 
+          <p>You have subscribed&nbsp;
             <span aria-label='party' role='img'>🎉</span>
             <span aria-label='party' role='img'>🎉</span>
             <span aria-label='party' role='img'>🎉</span>
@@ -45,7 +48,8 @@ class SubscribtionForm extends React.Component {
       <form className='subscribtion-form' onSubmit={this.handleSubmit}>
         <p className='subscribtion-form__description'>Get these stats delivered to your inbox every month</p>
         <input className='subscribtion-form__input' type='email' placeholder='email' onChange={this.handleChange} />
-        <input className='subscribtion-form__submit' type='submit' value='send' />
+        <br />
+        <input className='subscribtion-form__submit' disabled={isPending} type='submit' value={isPending ? 'sending...' : 'send'} />
       </form>
     )
   }
