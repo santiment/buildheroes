@@ -94,7 +94,7 @@ const App = ({activities = []}) => (
         marginBottom: 22
       }}>
         <span>Powered by <a href='https://santiment.net'>Santiment API</a></span>
-        <span>Made with ❤️ by Yura, Nemo, Kelvin, Kim</span>
+        <span>Made with <span aria-label='love' role='img'>❤️</span> by Yura, Nemo, Kelvin, Kim</span>
       </small>
     </footer>
   </div>
