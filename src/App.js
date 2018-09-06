@@ -1,6 +1,7 @@
 import React from 'react'
-import { getGATimeseries } from './getGithubActivity'
 import LineChart from 'react-svg-line-chart'
+import { getGATimeseries } from './getGithubActivity'
+import SubscribtionForm from './SubscribtionForm'
 import 'normalize.css/normalize.css'
 import './App.css'
 
@@ -61,24 +62,11 @@ const GithubActivityList = ({activities = []}) => (
   </table>
 )
 
-const MonthControl = () => (
-  <div className='month-control'>
-    <strong>2018</strong>
-    <div className='month active'>September</div>
-    <div className='month'>August</div>
-    <div className='month'>July</div>
-    <div className='month'>June</div>
-  </div>
-)
-
 const App = ({activities = []}) => (
   <div className='container'>
     <header className='title'>
       <h2>Top 12 crypto projects by 30 days github activity</h2>
     </header>
-    {
-      //<MonthControl />
-    }
     <section>
       <div className='github-activity-explanation'>
         <div className='rotate'>
@@ -96,14 +84,9 @@ const App = ({activities = []}) => (
             more about how it works?
           </a>
         </p>
+        <SubscribtionForm />
       </div>
       <GithubActivityList activities={activities}/>
-      {
-      //<div>
-        //<p>Subscribe to get monthly notification about top projects</p>
-        //<input type="" /><button>Subscribe</button>
-      //</div>
-      }
     </section>
     <footer>
       <small style={{
