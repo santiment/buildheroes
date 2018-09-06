@@ -1,0 +1,68 @@
+.subscribtion-form {
+  transition: all 0.25s ease;
+}
+
+.subscribtion-form .subscribtion-form__submit {
+  color: white;
+  background: #E94E77;
+  padding: .5rem;
+  border: none;
+  margin-top: 1em;
+}
+
+.subscribtion-form .subscribtion-form__input {
+  border: none;
+  border-bottom: 1px solid #3e3e3e;
+  padding: .5rem;
+  margin-right: 1em;
+}
+
+.subscribtion-form .subscribtion-form__input::placeholder {
+  text-transform: capitalize;
+}
+
+.subscribtion-form-success {
+  position: initial;
+  animation: 0.5s fadeIn;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+.subscribtion-form-success p {
+  margin: 0; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribtion-form-success {
+    position: absolute;
+    transform: translateY(+800%);
+    animation: 0.5s fadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .subscribtion-form .subscribtion-form__submit {
+    margin-top: 0;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(800%);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+}

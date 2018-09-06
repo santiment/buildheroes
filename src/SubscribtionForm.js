@@ -1,10 +1,12 @@
 import React from 'react'
+import './SubscribtionForm.css'
 
 const API_URL = 'https://us-central1-buidlheroes.cloudfunctions.net'
 
 class SubscribtionForm extends React.Component {
   state = {
-    email: undefined 
+    email: undefined,
+    isSendSuccess: false
   }
 
   handleSubmit = event => {
@@ -13,7 +15,7 @@ class SubscribtionForm extends React.Component {
     http.open('GET', API_URL + `/addSubscriber?email=${this.state.email}`)
     http.send();
     http.onreadystatechange = e => {
-      console.log(http.responseText)
+      this.setState({isSendSuccess: true})
     }
   }
 
@@ -22,11 +24,19 @@ class SubscribtionForm extends React.Component {
   }
 
   render() {
+    if (this.state.isSendSuccess) {
+      return (
+        <div className='subscribtion-form-success'>
+          <p>You have subscribed 🎉🎉🎉</p>
+          <p><strong>Thank you</strong></p>
+        </div>
+      )
+    }
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>Get these stats delivered to your inbox every month</p>
-        <input type='email' placeholder='email' onChange={this.handleChange} />
-        <input type='submit' value='send' />
+      <form className='subscribtion-form' onSubmit={this.handleSubmit}>
+        <p className='subscribtion-form__description'>Get these stats delivered to your inbox every month</p>
+        <input className='subscribtion-form__input' type='email' placeholder='email' onChange={this.handleChange} />
+        <input className='subscribtion-form__submit' type='submit' value='send' />
       </form>
     )
   }
