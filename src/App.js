@@ -92,7 +92,9 @@ const App = ({activities = []}) => (
       <small style={{
         float: 'right',
         marginBottom: 22
-      }}>Made by <a href='https://santiment.net'>Santiment API</a>
+      }}>
+        <span>Powered by <a href='https://santiment.net'>Santiment API</a></span>
+        <span>Made with ❤️ by Yura, Nemo, Kelvin, Kim</span>
       </small>
     </footer>
   </div>

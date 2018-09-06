@@ -1,5 +1,7 @@
 import React from 'react'
 
+const API_URL = 'https://us-central1-buidlheroes.cloudfunctions.net'
+
 class SubscribtionForm extends React.Component {
   state = {
     email: undefined 
@@ -7,7 +9,12 @@ class SubscribtionForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state.email) 
+    const http = new XMLHttpRequest()
+    http.open('GET', API_URL + `/addSubscriber?email=${this.state.email}`)
+    http.send();
+    http.onreadystatechange = e => {
+      console.log(http.responseText)
+    }
   }
 
   handleChange = event => {
