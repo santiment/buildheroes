@@ -7,11 +7,17 @@ p, li, td {
   line-height: 22px;
 }
 
+p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #3d4450;
+}
+
 a {
   outline: none;
   margin-right: 1em;
   font-weight: 400;
-  color: #067df7;
+  color: #3d4450;
   transition: color 0.2s ease;
 }
 
@@ -45,6 +51,7 @@ table {
   margin: 0;
   flex: 2;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 table thead {
@@ -72,6 +79,7 @@ table th {
 table a {
   text-transform: capitalize;
   font-weight: 800;
+  letter-spacing: 0;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -124,10 +132,24 @@ footer {
   padding: 1em;
 }
 
+footer a {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 table th {
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+tr:hover {
+  background: rgba(241,244,248,0.5);
+}
+
+td {
+  border-bottom: 1px solid #dde2e8;
+  font-size: 15px;
 }
 
 p {
@@ -209,9 +231,8 @@ h4 {
   }
 
   table .chart div {
-    margin-left: 1em;
-    margin-top: 0.5em;
-    height: 70px;
+    padding: 1em 0;
+    max-width: 250px;
   }
 
   .container .title {

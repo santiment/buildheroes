@@ -51,6 +51,7 @@ const GithubActivityList = ({activities = []}) => (
                 pathWidth={8}
                 gridVisible={false}
                 axisVisible={false}
+                viewBoxHeight={180}
                 labelsVisible={false}
               />
             )}
@@ -58,6 +59,14 @@ const GithubActivityList = ({activities = []}) => (
         </td>
       </tr>
     ))}
+    <tr>
+      <p>
+      <a 
+        rel='nofollow noopener'
+        target='_blank'
+        href='https://app-stage.santiment.net/assets/erc20'>View more projecs</a>
+      </p>
+    </tr>
     </tbody>
   </table>
 )
@@ -65,25 +74,34 @@ const GithubActivityList = ({activities = []}) => (
 const App = ({activities = []}) => (
   <div className='container'>
     <header className='title'>
-      <h2>Top 12 crypto projects by 30 days github activity</h2>
+      <h2>Top 12 crypto projects by 30 days development activity</h2>
     </header>
     <section>
       <div className='github-activity-explanation'>
         <div className='rotate'>
           <h2><span>Top 12 crypto</span></h2>
           <h2><span>projects</span></h2>
-          <h2><span>by github</span></h2>
+          <h2><span>by development</span></h2>
           <h2><span>activity</span></h2>
         </div>
         <p>
-          <strong>Github</strong> activity is the number of <strong>Github</strong> 'events' including issue interactions,
+          <strong>Development</strong> activity is the number of <strong>Github</strong> 'events' including issue interactions,
           pull requests, comments, and wiki edits, plus the number of public
           repositories a project is maintaining.</p>
         <p>
-          Read <a href="https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32">
+          Read <a 
+            rel='nofollow noopener'
+            target='_blank'
+            href="https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32">
             more about how it works?
           </a>
         </p>
+        <a 
+          href='https://twitter.com/BUIDLheroes?ref_src=twsrc%5Etfw' 
+          className='twitter-follow-button'
+          data-show-count='false'>
+          Follow @BUIDLheroes
+        </a>
         <SubscribtionForm />
       </div>
       <GithubActivityList activities={activities}/>
@@ -93,8 +111,8 @@ const App = ({activities = []}) => (
         float: 'right',
         marginBottom: 22
       }}>
-        <span>Powered by <a href='https://santiment.net'>Santiment API</a></span>
-        <span>Made with <span aria-label='love' role='img'>❤️</span> by Yura, Nemo, Kelvin, Kim</span>
+        <span>Powered by <a href='https://santiment.net'>Santiment API</a>{'  '}</span>
+        <span>Made with <span aria-label='love' role='img'>❤️</span> by <a href="https://twitter.com/YuraZatsepin">Yura</a>, <a href="https://twitter.com/ncerovac">Nemo</a>, <a href="https://twitter.com/claptrapxl">Kelvin</a>, Kim</span>
       </small>
     </footer>
   </div>
