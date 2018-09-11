@@ -61,9 +61,7 @@ const GithubActivityList = ({activities = []}) => (
     ))}
     <tr>
       <p>
-      <a 
-        rel='nofollow noopener'
-        target='_blank'
+      <a rel="noopener noreferrer" target='_blank'
         href='https://app-stage.santiment.net/assets/erc20'>View more projecs</a>
       </p>
     </tr>
@@ -89,9 +87,7 @@ const App = ({activities = []}) => (
           pull requests, comments, and wiki edits, plus the number of public
           repositories a project is maintaining.</p>
         <p>
-          Read <a 
-            rel='nofollow noopener'
-            target='_blank'
+          Read <a rel="noopener noreferrer" target='_blank'
             href="https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32">
             more about how it works?
           </a>

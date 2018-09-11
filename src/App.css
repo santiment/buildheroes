@@ -232,6 +232,7 @@ h4 {
 
   table .chart div {
     padding: 1em 0;
+    padding-left: 0.5rem;
     max-width: 250px;
   }
 
