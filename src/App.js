@@ -60,10 +60,12 @@ const GithubActivityList = ({activities = []}) => (
       </tr>
     ))}
     <tr>
-      <p>
-      <a rel="noopener noreferrer" target='_blank'
-        href='https://app.santiment.net/assets/erc20'>View more projecs</a>
-      </p>
+      <td>
+        <p>
+        <a rel="noopener noreferrer" target='_blank'
+          href='https://app.santiment.net/assets/erc20'>View more projecs</a>
+        </p>
+      </td>
     </tr>
     </tbody>
   </table>
