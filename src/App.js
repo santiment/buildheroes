@@ -62,7 +62,7 @@ const GithubActivityList = ({activities = []}) => (
     <tr>
       <p>
       <a rel="noopener noreferrer" target='_blank'
-        href='https://app-stage.santiment.net/assets/erc20'>View more projecs</a>
+        href='https://app.santiment.net/assets/erc20'>View more projecs</a>
       </p>
     </tr>
     </tbody>
